@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crédit App</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Arimo:wght@400;700&family=Hind:wght@300&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="welcome-message">
+    <h1>Welcome to the Salary Prediction App</h1>
+    <p>Enter your information to get an estimate.</p>
+  </div>
+
+  <div class="login">
+    <h2>Predict Salary Analysis</h2>
+
+    <!-- Form for receiving input to ML model -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="input-group">
+        <input type="text" name="Credit_History" placeholder="Credit History" required="required" autofocus />
+      </div>
+      <div class="input-group">
+        <input type="text" name="Married" placeholder="Married Status" required="required" />
+      </div>
+      <div class="input-group">
+        <input type="text" name="CoapplicationIncome" placeholder="Coapplication Income" required="required" />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br><br>
+      <div class="prediction-text">
+    {{ prediction_text }}
+  </div>
+       </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(45deg, #ff6b81, #f57c00, #00bcd4, #3e8e41);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.welcome-message {
+  margin-top: 30px;
+  text-align: left; /* Aligner à gauche */
+  padding-left: 20px; /* Décalage vers la gauche */
+    padding-right: 120px; /* Décalage vers la gauche */
+
+}
+
+.welcome-message h1 {
+  font-size: 46px;
+color: #000;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.login {
+color: #000;
+  background: rgba(255, 255, 255, 0.85); /* Fond blanc avec un léger fond transparent */
+  padding: 100px; /* Augmenter le padding pour rendre le formulaire plus grand */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width:200%;
+  max-width: 600px; /* Augmenter la largeur maximale du formulaire */
+  backdrop-filter: blur(10px); /* Effet flou sur l'arrière-plan */
+}
+
+.login h1 {
+  font-size: 88px; /* Agrandir la taille du titre */
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 16px 20px; /* Augmenter encore le padding des champs */
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px; /* Augmenter la taille du texte dans les champs */
+  background-color: #f9f9f9;
+ color: #000;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #000;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 16px; /* Augmenter la taille du bouton */
+  background-color: #4a77d4;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #3a68a0;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #2e4e7f;
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: #000;
+  border-radius: 8px;
+  color: white;
+  font-size: 24px
+  padding: 14px;
+  border: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3a68a0;
+}
+
+.btn-primary:active {
+  background-color: #2e4e7f;
+}
+
+/* Message de prédiction en noir */
+.prediction-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #000; /* Texte en noir */
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 600px; /* Augmenter la largeur du message */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce pour mettre en valeur */
+}
+/* Icônes sous le message de bienvenue */
+.welcome-message i {
+  font-size: 50px;  /* Augmenter la taille de l'icône */
+  color: #fff;      /* Icône en blanc */
+  margin-top: 20px; /* Espacement au-dessus de l'icône */
+}
+
+/* Icône de la banque */
+.fas.fa-university {
+  color: #fff; /* Couleur blanche pour l'icône */
+  font-size: 40px; /* Taille de l'icône */
+  margin-top: 20px; /* Espacement au-dessus de l'icône */
+}
+
+/* Icônes dans le formulaire */
+.input-group i {
+  margin-right: 10px; /* Espace entre l'icône et le champ de texte */
+  color: #4a77d4; /* Couleur bleue pour les icônes */
+  font-size: 20px;  /* Taille de l'icône */
+}
